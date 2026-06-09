@@ -223,13 +223,34 @@ window.onload = function () {
   const btnFetch = document.querySelector("#btn-fetch");
   const listContainer = document.querySelector("#list-container");
 
-  btnFetch.addEventListener("click", async function () {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-    const posts = await response.json();
-    posts.forEach((post) => {
-      const liElement = document.createElement("li");
-      liElement.innerHTML = post.title.toUpperCase();
-      listContainer.appendChild(liElement);
-    });
+  // Using then().catch()
+  btnFetch.addEventListener("click", function () {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => response.json())
+      .then((posts) => {
+        posts.forEach((post) => {
+          const liElement = document.createElement("li");
+          liElement.innerHTML = post.title;
+          listContainer.appendChild(liElement);
+        });
+      })
+      .catch((err) => console.error(err));
   });
+
+  // Using Async...await
+  //   btnFetch.addEventListener("click", async function () {
+  //     try {
+  //       const response = await fetch(
+  //         "https://jsonplaceholder.typicode.com/posts",
+  //       );
+  //       const posts = await response.json();
+  //       posts.forEach((post) => {
+  //         const liElement = document.createElement("li");
+  //         liElement.innerHTML = post.title.toUpperCase();
+  //         listContainer.appendChild(liElement);
+  //       });
+  //     } catch (err) {
+  //       console.error("Unable to fetch posts");
+  //     }
+  //   });
 };
