@@ -1,155 +1,136 @@
-// ASYNCHRONOUS PROGRAMMING
+// REST OPERATOR (...)
+// - Creates collection - Array
 
-// console.log("Starting the Program"); // Sync
-
-// // Async
-// Promise.resolve().then(function () {
-//   console.log("Inside Promise");
-// });
-
-// // Async
-// setTimeout(function () {
-//   console.log("Inside Timer");
-// }, 0);
-
-// console.log("Ending the Program"); // Sync
-
-// Dynamic in nature
-// var x = 20;
-// console.log(typeof x); // number
-
-// var y = "20";
-
-// console.log(x == y); // true - compares only values
-// console.log(x === y); // false - compares values along with types
-
-// x = "Hello World";
-// console.log(typeof x); // string
-
-// x = {}
-
-// x = function () { }
-
-// x = []
-
-// ARROW FUNCTIONS - Anonymous Function
-
-// var add = (n1, n2) => n1 + n2;
-
-// console.log("Result : ", add(4, 5)); // ?
-
-// var square = (n) => n * n;
-
-// console.log(square(3));
-
-// var marks = [99, 98, 94, 91, 89];
-
-// var total = 0;
-
-// for (var i = 0; i < marks.length; i++) {
-//   total += marks[i];
+// function demoRest(email, ...args) {
+//   console.log("Rest Operator : ", args[0]);
 // }
 
-// for (var mark of marks) {
-//   total += mark;
+// demoRest("test@test.com", 32, true);
+
+// // SPREAD OPERATOR (...)
+// // - Splits the collection - Array / Object
+
+// let marks = [99, 98, 93];
+// let finalMarks = [89, 88, ...marks];
+
+// console.log("Final Marks : ", finalMarks);
+
+// let userOne = {
+//   name: "John Doe",
+//   company: "XYZ Inc",
+// };
+
+// let userTwo = {
+//   ...userOne,
+//   name: "Jenny Public",
+// };
+
+// console.log("User Two : ", userTwo);
+
+// function demoSpread(email, age, isAdmin) {
+//   console.log("Email : ", email);
+//   console.log("Age : ", age);
+//   console.log("Is Admin : ", isAdmin);
 // }
+// // Obects are not Iterable
+// // let userThree = {
+// //   email: "test@test.com",
+// //   age: 23,
+// //   isAdmin: true,
+// // };
 
-// marks.forEach(function (mark) {
-//   total += mark;
-// });
+// let userFour = ["test1@test.com", 22, false];
 
-// marks.forEach((mark) => (total += mark));
+// demoSpread(...userFour);
 
-// var filteredMarks = marks.filter((mark) => mark > 94);
+// --------------------
+// DESTRUCTURING
 
-// console.log("Filtered Marks : ", filteredMarks);
-// console.log("Arrow Functional Total Marks : ", total);
+// Array Destructuring : Known number of elements
+// let friends = ["Monica", "Ross", "Rachel", "Joey"];
 
-// Does not have their own 'this' keyword
-// var person = {
-//   firstName: "John",
-//   lastName: "Doe",
-//   getFullName: function () {
-//     return () => this.firstName + " " + this.lastName;
+// let [f1, f3, f4] = friends;
+
+// console.log("f1 : ", f1);
+// console.log("f3 : ", f3);
+// console.log("f4 : ", f4);
+
+// Object Destructuring
+// let box = {
+//   width: 8,
+//   height: 9,
+//   length: 10,
+//   books: ["book1", "book2", "book3"],
+//   destination: {
+//     city: "Pune",
+//     street: "201 Main Road",
 //   },
 // };
 
-// var nestedFn = person.getFullName();
-// console.log(nestedFn());
+// let {
+//   width: boxWidth,
+//   length,
+//   height: boxHeight,
+//   books: [b1, b2, b3],
+//   destination: { city, street },
+// } = box;
 
-// // SCOPE CHAINING
-// // var x = 300;
-// function a() {
-//   //   var x = 100;
-//   function b() {
-//     // var x = 200;
-//     console.log("X = ", x);
-//   }
-//   b();
-// }
+// console.log("Width : ", boxWidth);
+// console.log("Height : ", boxHeight);
+// console.log("Length : ", length);
+// console.log("Book 1 : ", b1);
+// console.log("City : ", city);
+// console.log("Street : ", street);
 
-// a();
+// let employees = [
+//   { name: "John", age: 23 },
+//   { name: "Jenny", age: 22 },
+//   { name: "Jack", age: 21 },
+// ];
 
-// Do not 'arguments' keyword
-// function demo() {
-//   console.log("Arguments : ", arguments);
-// }
+// let [
+//   { name: e1_name, age: e1_age },
+//   { name: e2_name, age: e2_age },
+//   { name: e3_name, age: e3_age },
+// ] = employees;
 
-// var demoArrow = () => console.log("Arrow Arguments : ", arguments);
+// console.log("Age of Employee Two : ", e2_age);
 
-// demo("Hello", 123, true);
-// demoArrow("World", 456, false);
+// let [e1, e2, e3] = employees;
 
-// Can't call with 'new' operator
+// console.log("Employee One : ", e3);
 
-// Constructor Function
-// function Student(name, age) {
-//   // var this = {}
-//   this.name = name;
-//   this.age = age;
-//   // return this;
-// }
+// let { name: e1_name, age: e1_age } = e1;
 
-// var Person = (name, age) => {
-//   this.name = name;
-//   this.age = age;
-// };
+// console.log("Employee 1 Name : ", e1_name);
 
-// var john = new Student("John Doe", 23);
-// var jenny = new Student("Jenny Public", 22);
+// let { name: e2_name, age: e2_age } = e2;
+// ------------------
 
-// console.log(john);
+// TEMPLATE SYNTAX / LITERALS
+// - back tick (``)
+// - Multi-line string
+// - Embed variables into string
 
-// var monica = new Person("Monica", 23);
+// let userName = "Monica Geller";
+// let userAge = 22;
 
-// BLOCK SCOPING : restricts the scope of the variable to the nearest block
-// - let
-// - const
+// let greetings = `
+//     Hello from ${userName},
+//     I'm ${userAge} years old!
+// `;
+// console.log(greetings);
 
-// function demoBlockScope(arr) {
-//   // LOAD, FLASH = undefined (Variable Hoisting)
-//   if (arr.length > 2) {
-//     let LOAD = "Loading...";
-//     console.log(FLASH); // ?
-//   } else {
-//     let FLASH = "Flashing...";
-//   }
-// }
+// -------------------
+// DEFAULT PARAMETERS
 
-// demoBlockScope([2, 3, 4, 5]);
+function demoDefaultParameter(arr = []) {
+  //   arr = arr || [];
+  if (arr.length > 2) {
+    console.log("do something");
+  } else {
+    console.log("do something else");
+  }
+}
 
-// const USERNAME = "John";
-
-// USERNAME = "Jenny";
-
-const user = { name: "John" };
-
-user.name = "Jenny";
-
-console.log("User name : ", user.name);
-
-const friends = ["Monica", "Ross", "Rachel"];
-
-friends.push("Joey");
-
-console.log(friends);
+demoDefaultParameter([1, 2, 3]);
