@@ -97,80 +97,99 @@
 
 // ---------------
 //  Class
-class Person {
-  private name: string;
-  constructor(name: string) {
-    this.name = name;
-  }
-  getName() {
-    return this.name;
-  }
-}
+// class Person {
+//   private name: string;
+//   constructor(name: string) {
+//     this.name = name;
+//   }
+//   getName() {
+//     return this.name;
+//   }
+// }
 
-class Student extends Person {
-  private studId: string;
-  private _age: number = 0;
-  static numberOfStudents = 0;
+// class Student extends Person {
+//   private studId: string;
+//   private _age: number = 0;
+//   static numberOfStudents = 0;
 
-  constructor(id: string, name: string) {
-    super(name);
-    this.studId = id;
-    Student.numberOfStudents += 1;
-  }
+//   constructor(id: string, name: string) {
+//     super(name);
+//     this.studId = id;
+//     Student.numberOfStudents += 1;
+//   }
 
-  get age() {
-    return this._age;
-  }
+//   get age() {
+//     return this._age;
+//   }
 
-  set age(value: number) {
-    this._age = value;
-  }
+//   set age(value: number) {
+//     this._age = value;
+//   }
 
-  public getDetails() {
-    return `
-        Student ID : ${this.studId}
-        Student Name : ${super.getName()}
-        Student Age : ${this.age}
-        Total Enrollled Students : ${Student.numberOfStudents}
-        `;
-  }
-}
+//   public getDetails() {
+//     return `
+//         Student ID : ${this.studId}
+//         Student Name : ${super.getName()}
+//         Student Age : ${this.age}
+//         Total Enrollled Students : ${Student.numberOfStudents}
+//         `;
+//   }
+// }
 
-let monica = new Student("S001", "Monica Geller");
-monica.age = 22;
-// console.log(monica.getDetails());
+// let monica = new Student("S001", "Monica Geller");
+// monica.age = 22;
+// // console.log(monica.getDetails());
 
-let ross = new Student("S002", "Ross Geller");
-ross.age = 24;
+// let ross = new Student("S002", "Ross Geller");
+// ross.age = 24;
 // console.log(ross.getDetails());
 
 // ------------
 // ABSTRACT CLASS
-abstract class Recipe {
-  abstract prepareIngredients(): void;
-  abstract cookRecipe(): void;
-  abstract cleanUpDishes(): void;
+// abstract class Recipe {
+//   abstract prepareIngredients(): void;
+//   abstract cookRecipe(): void;
+//   abstract cleanUpDishes(): void;
 
-  execute() {
-    this.prepareIngredients();
-    this.cookRecipe();
-    this.cleanUpDishes();
-  }
+//   execute() {
+//     this.prepareIngredients();
+//     this.cookRecipe();
+//     this.cleanUpDishes();
+//   }
+// }
+
+// class Tea extends Recipe {
+//   prepareIngredients(): void {
+//     console.log("Bring tea leafs, water, milk and some sugar");
+//   }
+
+//   cookRecipe(): void {
+//     console.log("boil water for 5 minutes and then add all ingredients");
+//   }
+
+//   cleanUpDishes(): void {
+//     console.log("Wash all utensils");
+//   }
+// }
+
+// let tea = new Tea();
+// tea.execute();
+
+// -----------------
+// GENERICS
+
+function addAtBeggening<T>(value: T, collection: T[]): T[] {
+  return [value, ...collection];
 }
 
-class Tea extends Recipe {
-  prepareIngredients(): void {
-    console.log("Bring tea leafs, water, milk and some sugar");
-  }
+const newCollection = addAtBeggening<string>("Joey", [
+  "Monica",
+  "Ross",
+  "Rachel",
+]);
 
-  cookRecipe(): void {
-    console.log("boil water for 5 minutes and then add all ingredients");
-  }
+console.log(typeof newCollection[0]);
 
-  cleanUpDishes(): void {
-    console.log("Wash all utensils");
-  }
-}
+const numberCollection = addAtBeggening<number>(99, [98, 91, 89, 79]);
 
-let tea = new Tea();
-tea.execute();
+console.log(typeof numberCollection[0]);
