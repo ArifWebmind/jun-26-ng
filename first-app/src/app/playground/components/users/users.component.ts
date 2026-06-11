@@ -16,4 +16,8 @@ export class UsersComponent {
     avatar: 'assets/images/bill.jpeg',
     votes: 120,
   };
+
+  onMoreInfo(person: any) {
+    alert(`Mr ${person.lastName} is working with ${person.company}!`);
+  }
 }
