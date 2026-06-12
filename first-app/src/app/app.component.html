@@ -1,7 +1,15 @@
 <div class="container">
   <h1>App Works!</h1>
 
-  <app-life-cycle [counter]="counter"></app-life-cycle>
+  <button (click)="counter = counter + 1" class="btn btn-primary">
+    {{ counter }}
+  </button>
+
+  <button class="btn btn-secondary" (click)="showLifeCycle = !showLifeCycle">
+    Toggle Life Cycle
+  </button>
+
+  <app-life-cycle *ngIf="showLifeCycle" [counter]="counter"></app-life-cycle>
 
   <!-- <app-users></app-users> -->
 

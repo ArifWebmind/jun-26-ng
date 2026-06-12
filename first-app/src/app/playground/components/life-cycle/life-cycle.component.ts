@@ -29,12 +29,17 @@ export class LifeCycleComponent
     OnDestroy
 {
   @Input() counter!: number;
+  currentValue!: number;
 
+  constructor() {
+    console.log('constructor', this.currentValue);
+  }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('ngOnChanges', changes);
+    console.log('ngOnChanges', changes['counter'].currentValue);
+    this.currentValue = changes['counter'].currentValue;
   }
   ngOnInit(): void {
-    console.log('ngOnInit');
+    console.log('ngOnInit', this.currentValue);
   }
   ngDoCheck(): void {
     console.log('ngDoCheck');
@@ -53,5 +58,6 @@ export class LifeCycleComponent
   }
   ngOnDestroy(): void {
     console.log('ngOnDestroy');
+    this.currentValue = 0;
   }
 }

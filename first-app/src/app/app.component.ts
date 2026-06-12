@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   showCard = false;
+  showLifeCycle = false;
   counter = 0;
 }
