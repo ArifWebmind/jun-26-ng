@@ -1,0 +1,16 @@
+<!-- <ng-content></ng-content> -->
+
+<div class="card">
+  <div class="card-header">
+    <div class="text-center">
+      <ng-content select=".title"></ng-content>
+    </div>
+  </div>
+  <div class="card-body">
+    <ng-content select=".message"></ng-content>
+    <br />
+    <div class="float-end">
+      <ng-content select="button"></ng-content>
+    </div>
+  </div>
+</div>

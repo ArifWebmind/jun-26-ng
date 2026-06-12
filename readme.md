@@ -170,3 +170,15 @@ Local Scope -> Outer Scope -> Global Scope
 - npm install bootstrap
 - configure bootstrap in angular.json
 - restart the server
+
+## Angular Component
+
+- Reusable piece of code
+- Occupy space on UI
+- Data Binding
+  > [ Property Binding ]
+  > ( Event Binding )
+  > Two way data binding [( ngModel )]
+- Nested Component Communication
+  > Parent-to-Child : @Input() + Property Binding
+  > Child-to-Parent : @Output() + EventEmitter + Event Binding

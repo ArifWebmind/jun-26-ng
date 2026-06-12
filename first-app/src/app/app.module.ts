@@ -6,6 +6,7 @@ import { UsersComponent } from './playground/components/users/users.component';
 import { FormsModule } from '@angular/forms';
 import { UserImageComponent } from './playground/components/users/user-image/user-image.component';
 import { UserInfoComponent } from './playground/components/users/user-info/user-info.component';
+import { CardComponent } from './playground/ui/card/card.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { UserInfoComponent } from './playground/components/users/user-info/user-
     UsersComponent,
     UserImageComponent,
     UserInfoComponent,
+    CardComponent,
   ],
   imports: [
     // Modules
