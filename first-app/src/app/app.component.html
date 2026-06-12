@@ -3,11 +3,13 @@
 <app-users></app-users>
 
 <!-- Content Project -->
-<app-card>
+<button class="btn btn-primary" (click)="showCard = true">Show Card</button>
+
+<app-card *ngIf="showCard">
   <h5 class="title">Card Title</h5>
   <p class="message">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit pariatur ad
     cumque ea modi, optio atque? Accusamus modi ex minus?
   </p>
-  <button class="btn btn-primary">Ok</button>
+  <button (click)="showCard = false" class="btn btn-primary">Ok</button>
 </app-card>
