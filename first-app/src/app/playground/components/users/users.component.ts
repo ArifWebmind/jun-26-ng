@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from '../../../model/user';
 
 @Component({
   selector: 'app-users',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './users.component.css',
 })
 export class UsersComponent {
-  user = {
+  user: User = {
     firstName: 'bill',
     lastName: 'gates',
     dob: new Date('Dec 21, 1964'),
@@ -17,7 +18,7 @@ export class UsersComponent {
     votes: 120,
   };
 
-  onMoreInfo(person: any) {
+  onMoreInfo(person: User) {
     alert(`Mr ${person.lastName} is working with ${person.company}!`);
   }
 }
