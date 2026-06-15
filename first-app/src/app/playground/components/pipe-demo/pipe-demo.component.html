@@ -24,7 +24,7 @@
 
 <ul class="list-group">
   <li
-    *ngFor="let todo of todoCollection | filter: filteredStatus"
+    *ngFor="let todo of todoCollection | filter: filteredStatus | sort: 'asc'"
     class="list-group-item mb-2"
   >
     {{ todo.label | uppercase }}

@@ -26,3 +26,5 @@ export class FilterPipe implements PipeTransform {
     return resultArray;
   }
 }
+
+// Create a pipe to sort the todo collection on the basis of Labels
