@@ -16,6 +16,7 @@ import { ReversePipe } from './playground/pipes/reverse.pipe';
 import { FilterPipe } from './playground/pipes/filter.pipe';
 import { SortPipe } from './playground/pipes/sort.pipe';
 import { LoginComponent } from './playground/components/auth/login/login.component';
+import { ForbiddenPasswordDirective } from './playground/directives/forbidden-password.directive';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { LoginComponent } from './playground/components/auth/login/login.compone
     FilterPipe,
     SortPipe,
     LoginComponent,
+    ForbiddenPasswordDirective,
   ],
   imports: [
     // Modules

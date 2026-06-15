@@ -38,7 +38,7 @@
           <!-- password -->
           <div class="form-floating mb-3">
             <input
-              type="password"
+              type="text"
               class="form-control"
               name="password"
               id="password"
@@ -47,6 +47,7 @@
               required
               minlength="6"
               #passwordModel="ngModel"
+              appForbiddenPassword
             />
             <label for="password">Password</label>
             <!-- Password Error Messages -->
@@ -57,6 +58,11 @@
               <div *ngIf="passwordModel.hasError('minlength')">
                 <small style="color: red"
                   >*Should have at least six characters</small
+                >
+              </div>
+              <div *ngIf="passwordModel.hasError('forbiddenPassword')">
+                <small style="color: red"
+                  >password / pwd123 is not valid value.</small
                 >
               </div>
             </div>
