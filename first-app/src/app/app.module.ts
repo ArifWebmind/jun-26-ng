@@ -15,6 +15,7 @@ import { CountryCodePipe } from './playground/pipes/country-code.pipe';
 import { ReversePipe } from './playground/pipes/reverse.pipe';
 import { FilterPipe } from './playground/pipes/filter.pipe';
 import { SortPipe } from './playground/pipes/sort.pipe';
+import { LoginComponent } from './playground/components/auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SortPipe } from './playground/pipes/sort.pipe';
     ReversePipe,
     FilterPipe,
     SortPipe,
+    LoginComponent,
   ],
   imports: [
     // Modules
