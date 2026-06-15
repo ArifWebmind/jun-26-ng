@@ -89,7 +89,7 @@
           <mxGeometry height="60" width="240" x="305" y="390" as="geometry" />
         </mxCell>
         <mxCell id="u2SAy_uZLw9cFr2_aP8k-9" parent="1" style="text;strokeColor=none;fillColor=none;html=1;fontSize=26;fontStyle=1;verticalAlign=middle;align=center;autosizeText=1;" value="Data Binding" vertex="1">
-          <mxGeometry height="40" width="160" x="320" y="50" as="geometry" />
+          <mxGeometry height="40" width="160" x="355" y="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
