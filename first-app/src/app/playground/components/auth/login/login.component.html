@@ -6,7 +6,7 @@
       </div>
       <div class="card-body">
         <!-- form -->
-        <form>
+        <form #loginForm="ngForm" (submit)="onSubmit(loginForm)">
           <!-- username -->
           <div class="form-floating mb-3">
             <input
@@ -15,6 +15,9 @@
               name="username"
               id="username"
               placeholder=""
+              ngModel
+              email
+              required
             />
             <label for="username">Email</label>
           </div>
@@ -27,6 +30,9 @@
               name="password"
               id="password"
               placeholder=""
+              ngModel
+              required
+              minlength="6"
             />
             <label for="password">Password</label>
           </div>
@@ -35,7 +41,13 @@
           <div class="row">
             <div class="col">
               <div class="d-grid">
-                <button class="btn btn-primary">Login</button>
+                <button
+                  [disabled]="!loginForm.valid"
+                  type="submit"
+                  class="btn btn-primary"
+                >
+                  Login
+                </button>
               </div>
             </div>
             <div class="col">
