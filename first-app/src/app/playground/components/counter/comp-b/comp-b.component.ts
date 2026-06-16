@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Optional } from '@angular/core';
 import { CounterService } from '../../../services/counter.service';
 
 @Component({

@@ -276,3 +276,10 @@ Local Scope -> Outer Scope -> Global Scope
 - @SkipSelf : Angular skips the self component and look upward in the DI hierarchy tree
 - @Host : Angular looks DI Token in Self and Host Component
 - @Optional: Sets the Service as Optional; therefore does not throw NullInjector Error
+
+## JSON-Server installation steps
+
+1. Install json-server
+   > npm install -g json-server@0.17.4
+2. Create json file
+3. Serve the json file with json-server

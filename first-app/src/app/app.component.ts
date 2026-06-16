@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CounterService } from './playground/services/counter.service';
 
 @Component({
   selector: 'app-root',
