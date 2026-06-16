@@ -52,6 +52,9 @@
                   >Should have at least six characters</small
                 >
               </div>
+              <div *ngIf="password.hasError('specialSymbol')">
+                <small style="color: red">Must have special symbol (!)</small>
+              </div>
             </div>
           </div>
 

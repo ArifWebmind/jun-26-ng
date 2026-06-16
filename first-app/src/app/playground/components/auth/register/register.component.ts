@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
 import {
+  AbstractControl,
   FormBuilder,
   FormControl,
   FormGroup,
+  ValidationErrors,
+  ValidatorFn,
   Validators,
 } from '@angular/forms';
 
@@ -23,6 +26,7 @@ export class RegisterComponent {
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(6),
+        RegisterComponent.specialSymbolValidator('!'),
       ]),
     });
   }
@@ -37,5 +41,13 @@ export class RegisterComponent {
 
   onSubmit() {
     console.log(this.registerForm);
+  }
+
+  // Special Symbol Validator
+  static specialSymbolValidator(symbol: string): ValidatorFn {
+    return function (control: AbstractControl): ValidationErrors | null {
+      const hasSymbol = String(control.value).includes(symbol);
+      return hasSymbol ? null : { specialSymbol: true };
+    };
   }
 }
