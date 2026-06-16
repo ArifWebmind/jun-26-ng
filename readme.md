@@ -259,3 +259,20 @@ Local Scope -> Outer Scope -> Global Scope
 - ngTouched / ngUntouched
 - ngPristine / ngDirty
 - ngValid / ngInvalid
+
+# Services
+
+- Dependency Injection Principle
+- Single Responsibility Principle
+
+## DI Hierarchy
+
+- Environment Injector
+- Element Injector
+
+## Dependency Injection Modifiers
+
+- @Self : Angular looks for injector token in the self component
+- @SkipSelf : Angular skips the self component and look upward in the DI hierarchy tree
+- @Host : Angular looks DI Token in Self and Host Component
+- @Optional: Sets the Service as Optional; therefore does not throw NullInjector Error
