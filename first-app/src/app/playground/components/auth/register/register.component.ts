@@ -18,6 +18,8 @@ import {
 export class RegisterComponent {
   registerForm: FormGroup;
 
+  paymentMethods = ['card', 'upi', 'cod'];
+
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group(
       {
@@ -35,6 +37,8 @@ export class RegisterComponent {
           Validators.minLength(6),
         ]),
         hobbies: this.fb.array([]),
+        method: new FormControl(),
+        acceptedTerms: new FormControl(false, Validators.requiredTrue),
       },
       { validators: RegisterComponent.passwordMatch },
     );
@@ -56,11 +60,19 @@ export class RegisterComponent {
     return this.registerForm.get('hobbies') as FormArray;
   }
 
+  get method() {
+    return this.registerForm.get('method') as FormControl;
+  }
+
+  get acceptedTerms() {
+    return this.registerForm.get('acceptedTerms') as FormControl;
+  }
+
   onAddHobby() {
     this.hobbies.push(
       this.fb.group({
-        name: new FormControl(),
-        freq: new FormControl(),
+        name: new FormControl('', Validators.required),
+        freq: new FormControl('', Validators.required),
       }),
     );
   }
