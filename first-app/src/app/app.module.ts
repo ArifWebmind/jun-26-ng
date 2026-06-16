@@ -18,6 +18,8 @@ import { SortPipe } from './playground/pipes/sort.pipe';
 import { LoginComponent } from './playground/components/auth/login/login.component';
 import { ForbiddenPasswordDirective } from './playground/directives/forbidden-password.directive';
 import { RegisterComponent } from './playground/components/auth/register/register.component';
+import { CompAComponent } from './playground/components/counter/comp-a/comp-a.component';
+import { CompBComponent } from './playground/components/counter/comp-b/comp-b.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { RegisterComponent } from './playground/components/auth/register/registe
     LoginComponent,
     ForbiddenPasswordDirective,
     RegisterComponent,
+    CompAComponent,
+    CompBComponent,
   ],
   imports: [
     // Modules

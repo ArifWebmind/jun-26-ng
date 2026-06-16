@@ -247,6 +247,12 @@ Local Scope -> Outer Scope -> Global Scope
   > Logic inside the template
   > Create custom directive for custom validators
 - Model Driven Form / Reactive Form
+  > FormControl
+  > FormGroup
+  > FormBuilder
+  > FormArray
+  > Validators
+  > ValidatorFn
 
 ## Classes / States on Form and Form Control
 
