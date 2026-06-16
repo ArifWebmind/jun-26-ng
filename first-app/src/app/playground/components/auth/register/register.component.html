@@ -18,6 +18,17 @@
               formControlName="email"
             />
             <label for="email">Email</label>
+            <!-- Email Error Messages -->
+            <div *ngIf="email.invalid && email.touched">
+              <div *ngIf="email.hasError('required')">
+                <small style="color: red">Email is mandatory field</small>
+              </div>
+              <div *ngIf="email.hasError('email')">
+                <small style="color: red"
+                  >Should be in proper email format</small
+                >
+              </div>
+            </div>
           </div>
 
           <!-- password -->
@@ -31,18 +42,40 @@
               formControlName="password"
             />
             <label for="password">Password</label>
+            <!-- Password Error Messages -->
+            <div *ngIf="password.invalid && password.touched">
+              <div *ngIf="password.hasError('required')">
+                <small style="color: red">Password is mandatory field</small>
+              </div>
+              <div *ngIf="password.hasError('minlength')">
+                <small style="color: red"
+                  >Should have at least six characters</small
+                >
+              </div>
+            </div>
           </div>
 
           <!-- buttons - Register and Reset -->
           <div class="row">
             <div class="col">
               <div class="d-grid">
-                <button type="submit" class="btn btn-success">Register</button>
+                <button
+                  type="submit"
+                  class="btn btn-success"
+                  [disabled]="!registerForm.valid"
+                >
+                  Register
+                </button>
               </div>
             </div>
             <div class="col">
               <div class="d-grid">
-                <button class="btn btn-secondary">Reset</button>
+                <button
+                  class="btn btn-secondary"
+                  (click)="registerForm.reset()"
+                >
+                  Reset
+                </button>
               </div>
             </div>
           </div>

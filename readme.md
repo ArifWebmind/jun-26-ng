@@ -217,7 +217,39 @@ Local Scope -> Outer Scope -> Global Scope
   > Renderer2 : allows DOM Manipulation
   > @HostBinding, @HostListener
 
+# Pipes : Format the data on UI
+
+- uppercase
+- lowercase
+- titlecase
+- json
+- percent
+- number
+- async
+- date
+- currency
+
+## Custom pipe
+
+- CountryCode
+- Reverse
+- Filter
+- Sort
+
 ### Pure and Impure Changes
 
 - Pure change : Change in Object reference
 - Impure change : change in value
+
+# Forms
+
+- Template Driven Form
+  > Logic inside the template
+  > Create custom directive for custom validators
+- Model Driven Form / Reactive Form
+
+## Classes / States on Form and Form Control
+
+- ngTouched / ngUntouched
+- ngPristine / ngDirty
+- ngValid / ngInvalid
