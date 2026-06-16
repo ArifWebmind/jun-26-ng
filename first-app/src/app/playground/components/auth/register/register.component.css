@@ -13,3 +13,10 @@
 .ng-valid.ng-touched[name="password"] {
   border-bottom: 3px green solid;
 }
+.ng-invalid.ng-touched[name="cnfPassword"] {
+  border-bottom: 3px red solid;
+}
+
+.ng-valid.ng-touched[name="cnfPassword"] {
+  border-bottom: 3px green solid;
+}
