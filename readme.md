@@ -285,6 +285,23 @@ Local Scope -> Outer Scope -> Global Scope
 3. Serve the json file with json-server
    > json-server --watch db.json
 
+# Observable
+
+- Stream of events
+- Series of data
+- Cancellable
+- Lazily executed
+- Both Async and Sync
+- Powerful operators
+
+## Promise
+
+- Only Async Programming
+- One shot
+- Non cancellable
+- Eagerly executed
+- No Operator support
+
 ## Subject : acts as both Observer and Observable
 
 - BehaviourSubject : always have seed value

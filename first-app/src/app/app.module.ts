@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './playground/components/users/users.component';
@@ -22,6 +23,7 @@ import { CompAComponent } from './playground/components/counter/comp-a/comp-a.co
 import { CompBComponent } from './playground/components/counter/comp-b/comp-b.component';
 import { CounterService } from './playground/services/counter.service';
 import { ObservableDemoComponent } from './playground/components/observable-demo/observable-demo.component';
+import { ExpensesComponent } from './playground/components/expenses/expenses.component';
 
 @NgModule({
   declarations: [
@@ -45,12 +47,14 @@ import { ObservableDemoComponent } from './playground/components/observable-demo
     CompAComponent,
     CompBComponent,
     ObservableDemoComponent,
+    ExpensesComponent,
   ],
   imports: [
     // Modules
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   // providers: [CounterService], // Services
   bootstrap: [AppComponent],
