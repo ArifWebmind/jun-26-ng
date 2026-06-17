@@ -1,0 +1,20 @@
+<h2>Observable Demo Component</h2>
+
+<h4>Custom Observable from Scratch</h4>
+<button (click)="onSubscribe()" class="btn btn-primary">Subscribe</button>
+<button (click)="onUnsubscribe()" class="btn btn-danger">Unsubscribe</button>
+<hr />
+
+<h4>Interval Observable</h4>
+<button (click)="onIntervalSubs()" class="btn btn-success">
+  Interval Subscribe
+</button>
+<button class="btn btn-secondary" (click)="onIntervalUnsub()">
+  Interval Unsubscribe
+</button>
+<hr />
+
+<h4>From Observable</h4>
+<button class="btn btn-primary" (click)="onFromSubscribe()">
+  From Friends Subscribe
+</button>

@@ -21,6 +21,7 @@ import { RegisterComponent } from './playground/components/auth/register/registe
 import { CompAComponent } from './playground/components/counter/comp-a/comp-a.component';
 import { CompBComponent } from './playground/components/counter/comp-b/comp-b.component';
 import { CounterService } from './playground/services/counter.service';
+import { ObservableDemoComponent } from './playground/components/observable-demo/observable-demo.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { CounterService } from './playground/services/counter.service';
     RegisterComponent,
     CompAComponent,
     CompBComponent,
+    ObservableDemoComponent,
   ],
   imports: [
     // Modules

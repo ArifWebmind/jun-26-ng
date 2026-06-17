@@ -283,3 +283,4 @@ Local Scope -> Outer Scope -> Global Scope
    > npm install -g json-server@0.17.4
 2. Create json file
 3. Serve the json file with json-server
+   > json-server --watch db.json
