@@ -17,4 +17,12 @@ export class ExpenseService {
   delete(expenseId: string) {
     return this.httpClient.delete(`${this.baseUrl}/${expenseId}`);
   }
+
+  create(expense: Expense) {
+    return this.httpClient.post<Expense>(this.baseUrl, expense, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
 }

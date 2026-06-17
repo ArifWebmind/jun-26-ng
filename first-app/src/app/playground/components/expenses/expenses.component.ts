@@ -10,6 +10,7 @@ import { Expense } from '../../../model/expense';
 export class ExpensesComponent implements OnInit {
   service = inject(ExpenseService);
   expenseCollection!: Expense[];
+  showForm = false;
 
   ngOnInit(): void {
     this.service
@@ -22,6 +23,13 @@ export class ExpensesComponent implements OnInit {
       this.expenseCollection = this.expenseCollection.filter(
         (exp) => exp.id !== expenseId,
       );
+    });
+  }
+
+  addNewExpense(expense: Expense) {
+    this.service.create(expense).subscribe((newExpense) => {
+      this.expenseCollection = [newExpense, ...this.expenseCollection];
+      this.showForm = false;
     });
   }
 }

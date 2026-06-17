@@ -1,5 +1,20 @@
 <h2 class="text-center">My Expenses</h2>
 
+<div class="row mb-3">
+  <div class="col-4 offset-4">
+    <div class="d-grid">
+      <button class="btn btn-dark" (click)="showForm = !showForm">
+        {{ showForm ? "Hide Form" : "Add Expense" }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-expense-form
+  (newExpenseEvent)="addNewExpense($event)"
+  *ngIf="showForm"
+></app-expense-form>
+
 <div class="row">
   <div class="col-4" *ngFor="let expense of expenseCollection">
     <app-expense-item
