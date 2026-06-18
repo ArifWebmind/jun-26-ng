@@ -90,6 +90,11 @@ export class RegisterComponent {
       .subscribe((createdUser) => console.log('User created : ', createdUser));
   }
 
+  // CanDeactivate Guard
+  shouldExit() {
+    return confirm('Are you sure to exit from this page?');
+  }
+
   // Field level Validator - Special Symbol Validator
   static specialSymbolValidator(symbol: string): ValidatorFn {
     return function (control: AbstractControl): ValidationErrors | null {

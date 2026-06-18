@@ -41,6 +41,20 @@
       "method": "card",
       "acceptedTerms": true,
       "id": 1
+    },
+    {
+      "email": "abc@test.com",
+      "password": "abc!123",
+      "cnfPassword": "abc!123",
+      "hobbies": [
+        {
+          "name": "yoga",
+          "freq": 5
+        }
+      ],
+      "method": "upi",
+      "acceptedTerms": true,
+      "id": 2
     }
   ]
 }
