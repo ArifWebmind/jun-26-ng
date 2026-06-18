@@ -5,6 +5,7 @@ import { ExpensesComponent } from './playground/components/expenses/expenses.com
 import { PageNotFoundComponent } from './playground/components/page-not-found/page-not-found.component';
 import { CoursesComponent } from './pages/courses/courses.component';
 import { CourseDetailComponent } from './pages/courses/course-detail/course-detail.component';
+import { courseResolver } from './playground/resolvers/course.resolver';
 
 export const APP_ROUTES: Routes = [
   {
@@ -31,6 +32,7 @@ export const APP_ROUTES: Routes = [
   {
     path: 'courses/:courseId',
     component: CourseDetailComponent,
+    resolve: { course: courseResolver },
   },
   {
     path: '**',
