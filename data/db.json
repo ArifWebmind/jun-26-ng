@@ -12,5 +12,19 @@
       "createdAt": "2026-06-16T00:00:00.000Z",
       "id": 3
     }
+  ],
+  "courses": [
+    {
+      "id": "c001",
+      "title": "Angular 101",
+      "duration": 40,
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/6/67/Angular_gradient_logo.png"
+    },
+    {
+      "id": "c002",
+      "title": "Refresh React",
+      "duration": 60,
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcR5U16C8yXgBpl7-Bc7Itjx3_LRl425zINA&s"
+    }
   ]
 }

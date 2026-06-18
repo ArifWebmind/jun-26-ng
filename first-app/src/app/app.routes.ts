@@ -3,6 +3,8 @@ import { LoginComponent } from './playground/components/auth/login/login.compone
 import { RegisterComponent } from './playground/components/auth/register/register.component';
 import { ExpensesComponent } from './playground/components/expenses/expenses.component';
 import { PageNotFoundComponent } from './playground/components/page-not-found/page-not-found.component';
+import { CoursesComponent } from './pages/courses/courses.component';
+import { CourseDetailComponent } from './pages/courses/course-detail/course-detail.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -21,6 +23,14 @@ export const APP_ROUTES: Routes = [
   {
     path: 'expenses', // http://localhost:4200/expenses
     component: ExpensesComponent,
+  },
+  {
+    path: 'courses', // http://localhost:4200/course
+    component: CoursesComponent,
+  },
+  {
+    path: 'courses/:courseId',
+    component: CourseDetailComponent,
   },
   {
     path: '**',
