@@ -2,27 +2,15 @@
   "expenses": [
     {
       "title": "shopping",
-      "amount": 389,
+      "amount": 380,
       "createdAt": "2026-06-17T00:00:00.000Z",
       "id": 2
     },
     {
-      "title": "insurance",
-      "amount": 199,
+      "title": "grocery",
+      "amount": 299,
       "createdAt": "2026-06-16T00:00:00.000Z",
       "id": 3
-    },
-    {
-      "title": "planting",
-      "amount": 30,
-      "createdAt": "2026-06-09T00:00:00.000Z",
-      "id": 4
-    },
-    {
-      "id": 5,
-      "title": "insurance",
-      "amount": 190,
-      "createdAt": "2026-06-16T00:00:00.000Z"
     }
   ]
 }

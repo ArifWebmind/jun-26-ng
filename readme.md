@@ -307,3 +307,13 @@ Local Scope -> Outer Scope -> Global Scope
 - BehaviourSubject : always have seed value
 - ReplaySubject : receives number of emission to replay
 - AsyncSubject : provide last emitted value upon completion
+
+# What is Single Page App
+
+- less time to load on UI
+- do not reload / refresh the page
+- AJAX Calls
+- Better UI/UX
+- User Interactivity
+- App loads in one go
+- Lazy Loading

@@ -26,6 +26,10 @@ import { ObservableDemoComponent } from './playground/components/observable-demo
 import { ExpensesComponent } from './playground/components/expenses/expenses.component';
 import { ExpenseItemComponent } from './playground/components/expenses/expense-item/expense-item.component';
 import { ExpenseFormComponent } from './playground/components/expenses/expense-form/expense-form.component';
+import { PageNotFoundComponent } from './playground/components/page-not-found/page-not-found.component';
+import { RouterModule } from '@angular/router';
+import { APP_ROUTES } from './app.routes';
+import { MainNavigationComponent } from './playground/layout/main-navigation/main-navigation.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +56,8 @@ import { ExpenseFormComponent } from './playground/components/expenses/expense-f
     ExpensesComponent,
     ExpenseItemComponent,
     ExpenseFormComponent,
+    PageNotFoundComponent,
+    MainNavigationComponent,
   ],
   imports: [
     // Modules
@@ -59,6 +65,7 @@ import { ExpenseFormComponent } from './playground/components/expenses/expense-f
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule.forRoot(APP_ROUTES),
   ],
   // providers: [CounterService], // Services
   bootstrap: [AppComponent],
