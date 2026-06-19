@@ -1,0 +1,9 @@
+<h1 id="heading">{{ title }}</h1>
+
+<button (click)="toggle = !toggle">Toggle</button>
+
+@if (toggle) {
+  <p class="content">The main content</p>
+} @else {
+  <p class="sidebar">The side bar</p>
+}

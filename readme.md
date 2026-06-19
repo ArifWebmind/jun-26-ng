@@ -358,3 +358,7 @@ Local Scope -> Outer Scope -> Global Scope
 ### Dirty Checking :
 
 - Comparing prevValue and currValue of the model
+
+## Test Code coverage
+
+- ng test --code-coverage
