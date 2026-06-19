@@ -339,3 +339,22 @@ Local Scope -> Outer Scope -> Global Scope
 # Standalone Project
 
 - ng new second-app
+
+## Signals-
+
+- Detect changes on the model
+- Highly optimized
+- update() : update the current signal value
+- set() : replace the signal value
+
+- Writable Signals : can be modified using update() and set() methods
+- Computed Signals : are computed from other signal value; Readable only
+- effect() : runs whenever the signal value changes
+
+## Digest Cycle :
+
+- Performs dirty checking on all the components in app
+
+### Dirty Checking :
+
+- Comparing prevValue and currValue of the model

@@ -11,7 +11,7 @@ export class ChildComponent {
   // @Input()
   // title!: string;
 
-  title = input<string>();
+  title = input.required<string>();
   sendAlertEvent = output<string>();
 
   onSendAlert() {
